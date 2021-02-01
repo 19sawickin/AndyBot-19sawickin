@@ -24,6 +24,22 @@ public class MazeSolver extends MazeSolverSupport{
 
         //TODO: After passing the road block, move up 2 more spaces to
         // complete the maze!
+
+        andyBot.moveUp(1);
+        andyBot.shuffleLeft(2);
+        andyBot.moveUp(2);
+        andyBot.shuffleLeft(1);
+        andyBot.moveUp(1);
+        andyBot.shuffleLeft(1);
+        andyBot.moveUp(2);
+        andyBot.shuffleRight(3);
+        andyBot.moveUp(2);
+        andyBot.shuffleRight(2);
+
+        this.solveRoadBlock(this.getHint());
+
+        andyBot.moveUp(2);
+
     }
 
     /**
@@ -31,5 +47,7 @@ public class MazeSolver extends MazeSolverSupport{
      */
     public void solveRoadBlock(int x){
         //TODO: call enterPassword and pass it 4 times x, minus 6
+
+        this.enterPassword(4*x-6);
     }
 }

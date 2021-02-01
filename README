@@ -1,7 +1,17 @@
 README <project name>
 
 HANDIN:
+Final
 
 DESIGN CHOICES:
+Nesting is when you use a method as one of the arguments while calling another method.
+For example, in the solve() method of MazeSolver, the method getHint() was passed into
+the method solveRoadBlock() as an argument. The method getHint() generates a random integer,
+so nesting it in solveRoadBlock passed a random integer into the solveRoadBlock() method
+and assigned it to "x" which was used in further calculations.
 
 KNOWN BUGS:
+
+
+HOURS:
+This program took me 1 hour to complete.

@@ -16,15 +16,8 @@ public class MazeSolver extends MazeSolverSupport{
      * The method can manipulate an andybot instance to solve the maze.
      */
     public void solve(AndyBot andyBot){
-        //TODO: Call move methods on the robot so that it knows
-        // which steps to take.
 
-        //TODO: Nest a call to getHint within a call to solveRoadBlock
-        // so that the hint is passed to solveRoadBlock.
-
-        //TODO: After passing the road block, move up 2 more spaces to
-        // complete the maze!
-
+        //andy navigates through the maze until he reaches the roadblock
         andyBot.moveUp(1);
         andyBot.shuffleLeft(2);
         andyBot.moveUp(2);
@@ -36,8 +29,10 @@ public class MazeSolver extends MazeSolverSupport{
         andyBot.moveUp(2);
         andyBot.shuffleRight(2);
 
+        //andy solves the roadblock
         this.solveRoadBlock(this.getHint());
 
+        //andy moves out of the maze
         andyBot.moveUp(2);
 
     }
@@ -46,7 +41,6 @@ public class MazeSolver extends MazeSolverSupport{
      * Solves a roadblock using the passed in integer.
      */
     public void solveRoadBlock(int x){
-        //TODO: call enterPassword and pass it 4 times x, minus 6
 
         this.enterPassword(4*x-6);
     }

@@ -16,7 +16,6 @@ public class MazeSolver extends MazeSolverSupport{
      * The method can manipulate an andybot instance to solve the maze.
      */
     public void solve(AndyBot andyBot){
-
         //andy navigates through the maze until he reaches the roadblock
         andyBot.moveUp(1);
         andyBot.shuffleLeft(2);
@@ -28,20 +27,16 @@ public class MazeSolver extends MazeSolverSupport{
         andyBot.shuffleRight(3);
         andyBot.moveUp(2);
         andyBot.shuffleRight(2);
-
         //andy solves the roadblock
         this.solveRoadBlock(this.getHint());
-
         //andy moves out of the maze
         andyBot.moveUp(2);
-
     }
 
     /**
      * Solves a roadblock using the passed in integer.
      */
     public void solveRoadBlock(int x){
-
         this.enterPassword(4*x-6);
     }
 }
